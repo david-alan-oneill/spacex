@@ -6,3 +6,8 @@
 
   font-weight: normal;
 }
+
+.row {
+  width: 100%;
+  display: flex;
+}

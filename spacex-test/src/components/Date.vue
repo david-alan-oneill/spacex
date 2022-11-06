@@ -1,8 +1,5 @@
 <template>
-  <h1>A Date</h1>
-  <p>dateNumber: {{dateNumber}}</p>
-  <p>dateUtc: {{dateUtc}}</p>
-  <p>launch: {{launch}}</p>
+  <span class="date">{{dateNumber}}</span>
 </template>
 
 <script>
@@ -28,4 +25,13 @@ export default {
 </script>
 
 <style scoped>
+.date {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.launch-date {
+  background-color: lightblue;
+}
 </style>

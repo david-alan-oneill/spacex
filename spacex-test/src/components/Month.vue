@@ -36,5 +36,6 @@ export default {
 .month {
   width: 25%;
   float: left;
+  margin-top: 20px;
 }
 </style>

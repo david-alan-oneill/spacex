@@ -1,8 +1,9 @@
 <template>
-  <h1>A Month</h1>
-  <p>title: {{title}}</p>
-  <p>numberOfDays: {{numberOfDays}}</p>
-  <Date date-number="1" date-utc="2006-03-24T22:30:00.000Z" launch="{}"/>
+  <div class="month">
+    <h3>{{title}}</h3>
+    <p>numberOfDays: {{numberOfDays}}</p>
+    <Date date-number="1" date-utc="2006-03-24T22:30:00.000Z" launch="{}"/>
+  </div>
 </template>
 
 <script>
@@ -32,5 +33,8 @@ export default {
 </script>
 
 <style scoped>
-
+.month {
+  width: 25%;
+  float: left;
+}
 </style>

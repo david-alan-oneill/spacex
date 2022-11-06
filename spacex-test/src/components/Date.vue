@@ -14,7 +14,7 @@ export default {
       required: true
     },
     dateUtc: {
-      type: Date,
+      type: String,
       required: false,
       default: null
     },

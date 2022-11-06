@@ -1,10 +1,12 @@
 <template>
   <h1>A Month</h1>
-  <Date></Date>
+  <p>title: {{title}}</p>
+  <p>numberOfDays: {{numberOfDays}}</p>
+  <Date date-number="1" date-utc="2006-03-24T22:30:00.000Z" launch="{}"/>
 </template>
 
-<script setup>
-import Date from './Date.vue'
+<script>
+import Date from './Date.vue';
 
 export default {
   name: 'Month',

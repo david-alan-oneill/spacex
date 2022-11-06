@@ -1,5 +1,8 @@
 <template>
   <h1>A Date</h1>
+  <p>dateNumber: {{dateNumber}}</p>
+  <p>dateUtc: {{dateUtc}}</p>
+  <p>launch: {{launch}}</p>
 </template>
 
 <script>

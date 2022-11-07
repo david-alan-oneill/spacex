@@ -25,7 +25,7 @@ export default {
       required: true
     },
     monthNumber: {
-      type: Number,
+      type: String,
       required: true
     },
     launches: {
@@ -69,17 +69,18 @@ export default {
 
       const today = "2022-" + this.monthNumber + "-" + dateNumber;
       const launches = JSON.parse(JSON.stringify(this.docs));
+      let launchData = null;
 
       launches.forEach(function (launch) {
         const dateUtc = launch.date_utc.split("T")[0];
 
         if (dateUtc === today) {
-          console.log(launch);
-          return launch;
+          // console.log(launch);
+          launchData = launch;
         }
       });
 
-      return null;
+      return launchData;
     }
   },
   data() {

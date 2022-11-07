@@ -2,7 +2,7 @@
   <div class="month">
     <h3 class="month-title">{{title}}</h3>
     <div class="row" v-for="week in weeks">
-      <Date v-for="date in week" :key="week + date" :date-number="date.number" :launch="checkIfTodayHasLaunch(date.number)" />
+      <Date v-for="date in week" :key="Math.floor(Math.random() * 1000)+'-'+date.number" :date-number="date.number" :launch="checkIfTodayHasLaunch(date.number)" />
     </div>
   </div>
 </template>
@@ -103,6 +103,8 @@ export default {
         dates = [];
       }
     }
+
+    this.weeks[week] = dates;
 
     const docs = await this.fetchLaunches();
     this.populateDocs(docs);

@@ -1,22 +1,22 @@
 <template>
   <main>
     <div class="row">
-      <Month title="January" :number-of-days="getNumberOfDaysForMonth(1)"/>
-      <Month title="February" :number-of-days="getNumberOfDaysForMonth(2)"/>
-      <Month title="March" :number-of-days="getNumberOfDaysForMonth(3)"/>
-      <Month title="April" :number-of-days="getNumberOfDaysForMonth(4)"/>
+      <Month title="January" :number-of-days="getNumberOfDaysForMonth(1)" :month-number="1" />
+      <Month title="February" :number-of-days="getNumberOfDaysForMonth(2)" :month-number="2" />
+      <Month title="March" :number-of-days="getNumberOfDaysForMonth(3)" :month-number="3" />
+      <Month title="April" :number-of-days="getNumberOfDaysForMonth(4)" :month-number="4" />
     </div>
     <div class="row">
-      <Month title="May" :number-of-days="getNumberOfDaysForMonth(5)"/>
-      <Month title="June" :number-of-days="getNumberOfDaysForMonth(6)"/>
-      <Month title="July" :number-of-days="getNumberOfDaysForMonth(7)"/>
-      <Month title="August" :number-of-days="getNumberOfDaysForMonth(8)"/>
+      <Month title="May" :number-of-days="getNumberOfDaysForMonth(5)" :month-number="5" />
+      <Month title="June" :number-of-days="getNumberOfDaysForMonth(6)" :month-number="6" />
+      <Month title="July" :number-of-days="getNumberOfDaysForMonth(7)" :month-number="7" />
+      <Month title="August" :number-of-days="getNumberOfDaysForMonth(8)" :month-number="8" />
     </div>
     <div class="row">
-      <Month title="September" :number-of-days="getNumberOfDaysForMonth(9)"/>
-      <Month title="October" :number-of-days="getNumberOfDaysForMonth(10)"/>
-      <Month title="November" :number-of-days="getNumberOfDaysForMonth(11)"/>
-      <Month title="December" :number-of-days="getNumberOfDaysForMonth(12)"/>
+      <Month title="September" :number-of-days="getNumberOfDaysForMonth(9)" :month-number="9" />
+      <Month title="October" :number-of-days="getNumberOfDaysForMonth(10)" :month-number="10" />
+      <Month title="November" :number-of-days="getNumberOfDaysForMonth(11)" :month-number="11" />
+      <Month title="December" :number-of-days="getNumberOfDaysForMonth(12)" :month-number="12" />
     </div>
   </main>
 </template>

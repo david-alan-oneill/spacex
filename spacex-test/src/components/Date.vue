@@ -10,16 +10,16 @@ export default {
       type: Number,
       required: true
     },
-    dateUtc: {
-      type: String,
-      required: false,
-      default: null
-    },
     launch: {
       type: Object,
       required: false,
       default: null
     }
+  },
+  created() {
+    // if (this.launch) {
+      console.log(this.launch);
+    // }
   }
 }
 </script>

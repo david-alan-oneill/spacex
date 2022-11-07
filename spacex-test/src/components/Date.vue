@@ -1,5 +1,5 @@
 <template>
-  <span class="date">{{dateNumber}}</span>
+  <span class="date" :class="isLaunchDate ? 'launch-date' : ''">{{dateNumber}}</span>
 </template>
 
 <script>
@@ -16,17 +16,22 @@ export default {
       default: null
     }
   },
+  data() {
+    return {
+      isLaunchDate: false
+    }
+  },
   created() {
-    // if (this.launch) {
-      console.log(this.launch);
-    // }
+    if (this.launch) {
+      this.isLaunchDate = true;
+    }
   }
 }
 </script>
 
 <style scoped>
 .date {
-  width: 100%;
+  width: 10%;
   float: left;
   text-align: center;
 }

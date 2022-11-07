@@ -22,7 +22,7 @@ export default {
         const launchData = {
           'id': this.launch.id,
           'name': this.launch.name,
-          'date_utc': new Date(this.launch.date_utc).toDateString(),
+          'date_utc': new Date(this.launch.date_utc).toDateString() + ' ' + new Date(this.launch.date_utc).toLocaleTimeString() ,
           'flight_number': this.launch.flight_number
         };
 

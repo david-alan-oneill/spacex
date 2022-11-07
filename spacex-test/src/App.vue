@@ -1,5 +1,6 @@
 <template>
   <main>
+    <h2>Click a date to view more information about launch</h2>
     <div class="row">
       <Month title="January" :number-of-days="getNumberOfDaysForMonth(1)" :month-number="'01'" @viewLaunchData="viewLaunchData" />
       <Month title="February" :number-of-days="getNumberOfDaysForMonth(2)" :month-number="'02'" @viewLaunchData="viewLaunchData" />
@@ -19,17 +20,6 @@
       <Month title="December" :number-of-days="getNumberOfDaysForMonth(12)" :month-number="'12'" @viewLaunchData="viewLaunchData" />
     </div>
   </main>
-  <div id="popup" class="popup-wrapper hide">
-    <div class="popup-content">
-      <div class="popup-title">
-        <button type="button" class="popup-close">&times;</button>
-        <h3>Popup Title</h3>
-      </div>
-      <div class="popup-body">
-        <p>Popup body</p>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>

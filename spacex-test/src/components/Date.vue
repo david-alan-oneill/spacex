@@ -1,5 +1,5 @@
 <template>
-  <span class="date" :class="isLaunchDate ? 'launch-date' : ''">{{dateNumber}}</span>
+  <span class="date" :class="isLaunchDate ? 'launch-date' : '', isUpComing ? 'launch-upcoming' : ''" @click="displayLaunchData">{{dateNumber}}</span>
 </template>
 
 <script>
@@ -16,14 +16,33 @@ export default {
       default: null
     }
   },
+  methods: {
+    displayLaunchData() {
+      if (this.launch) {
+        const launchData = {
+          'id': this.launch.id,
+          'name': this.launch.name,
+          'date_utc': new Date(this.launch.date_utc).toDateString(),
+          'flight_number': this.launch.flight_number
+        };
+
+        this.$emit('viewLaunch', launchData);
+      }
+    }
+  },
   data() {
     return {
-      isLaunchDate: false
+      isLaunchDate: false,
+      isUpComing: false
     }
   },
   created() {
     if (this.launch) {
-      this.isLaunchDate = true;
+      if (this.launch.upcoming) {
+        this.isUpComing = true;
+      } else {
+        this.isLaunchDate = true;
+      }
     }
   }
 }
@@ -38,5 +57,11 @@ export default {
 
 .launch-date {
   background-color: lightblue;
+  border-radius: 20px;
+}
+
+.launch-upcoming {
+  background-color: lightgray;
+  border-radius: 20px;
 }
 </style>

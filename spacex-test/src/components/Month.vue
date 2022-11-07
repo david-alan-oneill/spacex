@@ -2,7 +2,11 @@
   <div class="month">
     <h3 class="month-title">{{title}}</h3>
     <div class="row" v-for="week in weeks">
-      <Date v-for="date in week" :key="Math.floor(Math.random() * 1000)+'-'+date.number" :date-number="date.number" :launch="checkIfTodayHasLaunch(date.number)" />
+      <Date v-for="date in week" :key="Math.floor(Math.random() * 1000)+'-'+date.number"
+            :date-number="date.number"
+            :launch="checkIfTodayHasLaunch(date.number)"
+            @viewLaunch="viewLaunch"
+      />
     </div>
   </div>
 </template>
@@ -75,12 +79,14 @@ export default {
         const dateUtc = launch.date_utc.split("T")[0];
 
         if (dateUtc === today) {
-          // console.log(launch);
           launchData = launch;
         }
       });
 
       return launchData;
+    },
+    viewLaunch(launchData) {
+      this.$emit('viewLaunchData', launchData);
     }
   },
   data() {
